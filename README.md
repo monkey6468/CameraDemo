@@ -1,6 +1,6 @@
 ## WHCamera
 
-基于Object-C的iOS纯原生API相机，高度集成，使用快捷简单。可快速集成使用。
+基于Object-C的iOS纯原生API相机，高度集成，使用快捷简单。可快速集成使用。一键集成的方便！
 
 最低支持iOS7的系统。
 
@@ -11,9 +11,9 @@
 
 1、CocoaPods 
 
-- 将WHCamera的pod条目添加到您的Podfile pod 'WHCamera'， '~>0.0.1'；
-- 通过运行pod Install安装；
-- 用#import "WHCamera.h"在需要的地方包含WHCamera。
+- 将WHCamera的pod条目添加到您的`Podfile` `pod 'WHCamera'， '~>0.0.1'`；
+- 通过运行`pod install`安装；
+- 用`#import "WHCamera.h"`在需要的地方包含`WHCamera`。
 
 2、直接下载源码，导入工程中
 
