@@ -24,7 +24,6 @@
 
 ```
 #import "WHCamera.h"
-
 ```
 
 2、声明全局变量并设置代理
@@ -68,7 +67,6 @@ self.camera = [[WHCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x
 API_AVAILABLE(ios(11.0)){
     NSLog(@"%s",__func__);
 }
-
 ```
 6、摄像头停止运行
 
