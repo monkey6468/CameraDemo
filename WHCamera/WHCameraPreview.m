@@ -20,10 +20,12 @@
     AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.layer;
     return previewLayer.session;
 }
+
 - (void)setSessionPreset:(NSString *)sessionPreset
 {
     _sessionPreset = sessionPreset;
 }
+
 - (void)setSession:(AVCaptureSession *)session
 {
     AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.layer;

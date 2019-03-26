@@ -38,10 +38,10 @@ API_AVAILABLE(ios(11.0))
 
 @property (nonatomic, assign) UIDeviceOrientation iDeviceOrientation;
 @property (nonatomic, assign) AVCaptureVideoOrientation captureVideoOrientation;
-@property (nonatomic, assign) BOOL isGetImage;
-@property (nonatomic, assign) BOOL bEnabledDepth;
-@property (nonatomic, assign) BOOL bAdaptCamera;
-@property (nonatomic, assign) BOOL bPortrait;
+@property (nonatomic, assign) BOOL isGetImage;          ///< 获取图片
+@property (nonatomic, assign) BOOL bEnabledDepth;       ///< 深度信息可用标志
+@property (nonatomic, assign) BOOL bAdaptCamera;        ///< 摄像头自适应，即有深度就用深度
+@property (nonatomic, assign) BOOL bPortrait;           ///< 设备仅支持竖屏
 @property (nonatomic, assign) id<WHCameraDelegate> delegate;
 
 @property (nonatomic, copy) WHCameraImageBlock blockImage;
@@ -635,14 +635,14 @@ API_AVAILABLE(ios(11.0))
 {
     NSString *strDeviceModel = [self getDeviceModel];
     NSRange rangeiPad8 = [strDeviceModel rangeOfString:@"iPad8"];// 带深度的iPad Pro
-    NSRange rangeiPhone10_3 = [strDeviceModel rangeOfString:@"iPad8"];//iPhone XR
-    NSRange rangeiPhone10_6 = [strDeviceModel rangeOfString:@"iPad8"];//iPhone XR
-    NSRange rangeiPhone11_2 = [strDeviceModel rangeOfString:@"iPad8"];//iPhone XS
-    NSRange rangeiPhone11_6 = [strDeviceModel rangeOfString:@"iPad8"];//iPhone XS Max
+    NSRange rangeiPhone10_3 = [strDeviceModel rangeOfString:@"iPhone10,3"];//iPhone X
+    NSRange rangeiPhone10_6 = [strDeviceModel rangeOfString:@"iPhone10,6"];//iPhone X
+    NSRange rangeiPhone11_2 = [strDeviceModel rangeOfString:@"iPhone11,2"];//iPhone XS
+    NSRange rangeiPhone11_6 = [strDeviceModel rangeOfString:@"iPhone11,6"];//iPhone XS Max
 
     if ((rangeiPad8.location != NSNotFound)// 带深度的iPad Pro
-        ||(rangeiPhone10_3.location != NSNotFound)//iPhone XR
-        ||(rangeiPhone10_6.location != NSNotFound)//iPhone XR
+        ||(rangeiPhone10_3.location != NSNotFound)//iPhone X
+        ||(rangeiPhone10_6.location != NSNotFound)//iPhone X
         ||(rangeiPhone11_2.location != NSNotFound)//iPhone XS
         ||(rangeiPhone11_6.location != NSNotFound)//iPhone XS Max
         )
