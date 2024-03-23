@@ -78,3 +78,5 @@ API_AVAILABLE(ios(11.0)){
 ```
 [self.camera releaseCamera];
 ```
+## 访问量
+![](http://profile-counter.glitch.me/elnfnoosm-iOS_network/count.svg)
